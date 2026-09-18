@@ -18,24 +18,19 @@ void string_reverse(string *s){
 //main function
 int main() { 
 
-    //making a string variable to store
-    string t;
     //making dynamic string array
     string *text = new string;
 
     //taking string from the user in a string variable 
     cout << "Write the text you want to reverse: " << endl; 
-    getline(cin, t); //used getline to consider spaces as characters
-
-    //assigning variable's address to the dynamic string array array 
-    text = &t;
+    getline(cin, *text); //used getline to consider spaces as characters
 
     //calling the function
     cout << "Reversed string: " << endl;
     string_reverse(text);
 
     //deleting the array
-    delete[] text;
+    delete text;
 
     return 0;
 }

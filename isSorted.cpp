@@ -5,7 +5,7 @@ using namespace std;
 //adding sorted function
 bool isSorted(const int* arr, const int size){
     for(int i = 0; i < size; i ++){
-        if (arr[i] >= arr[i+1]){
+        if (arr[i] > arr[i+1]){
             return false;
         }
     }
@@ -59,6 +59,12 @@ void testAllSameValues() {
 void testNegativelySortedValues() {
     int arr[] = {-1, -2, -3, -4, -5};
     bool result = isSorted(arr, 5);
+    assert(result == false);
+}
+//9. edge case
+void testEmptyArray() {
+    int arr[] = {};
+    bool result = isSorted(arr, 0);
     assert(result == false);
 }
 

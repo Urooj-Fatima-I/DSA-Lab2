@@ -65,7 +65,7 @@ void testNegativelySortedValues() {
 void testEmptyArray() {
     int arr[] = {};
     bool result = isSorted(arr, 0);
-    assert(result == false);
+    assert(result == true);
 }
 
 //main function
@@ -79,5 +79,8 @@ int main(){
     testNegativeArray();
     testAllSameValues();
     testNegativelySortedValues();
-
+    //edge case
+    testEmptyArray();
+    
+    return 0;
 }
